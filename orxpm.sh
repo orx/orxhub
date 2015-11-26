@@ -64,3 +64,6 @@ if [ "$NEW_PLATFORM" == "$(git rev-parse HEAD)" ]; then
 else
     git commit --amend --no-edit
 fi
+
+echo "Touching src/CMakeLists.txt so that new source files are discovered during next build."
+touch src/CMakeLists.txt
