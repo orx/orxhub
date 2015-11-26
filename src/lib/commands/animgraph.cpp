@@ -415,7 +415,7 @@ void RegisterAnimGraphCommands() {
 
         orxCOMMAND_VAR_DEF ret_of_query;
         ret_of_query.eType = orxCOMMAND_VAR_TYPE_BOOL;
-        ret_of_set.zName = "Result";
+        ret_of_query.zName = "Result";
 
         orxCommand_Register("ObjectX.GetAbimForTag", GetAnimForTagCommand, 2, 0, args, &ret_of_animfortag);
         orxCommand_Register("ObjectX.SetAnimByTag", SetAnimByTagCommand, 2, 1, args, &ret_of_set);
