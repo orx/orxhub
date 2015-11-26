@@ -1,7 +1,6 @@
 if [ "$#" -eq 1 ]; then
     REMOTE=$1
     mkdir -p .orxpm
-    echo $1 > .orxpm/remote
 elif [ -f .orxpm/remote ]; then
     REMOTE=$(cat .orxpm/remote)
     echo "Using the previous package repository: $REMOTE"
@@ -10,6 +9,8 @@ else
     echo "Using the default remote: $DEFAULT_REMOTE"
     REMOTE=$DEFAULT_REMOTE
 fi
+
+echo $REMOTE > .orxpm/remote
 
 mkdir -p .orxpm/workbench
 cd .orxpm/workbench
