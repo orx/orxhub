@@ -392,6 +392,7 @@ void RegisterAnimGraphCommands() {
         arg.zName = "AnimationGraphSection";
         orxCOMMAND_VAR_DEF ret;
         ret.eType = orxCOMMAND_VAR_TYPE_NONE;
+        ret.zName = "";
         orxCommand_Register("ConfigX.ProcessAnimGraph", ProcessAnimGraphCommand, 1, 0, &arg, &ret);
     }
 
@@ -410,6 +411,7 @@ void RegisterAnimGraphCommands() {
 
         orxCOMMAND_VAR_DEF ret_of_set;
         ret_of_set.eType = orxCOMMAND_VAR_TYPE_NONE;
+        ret_of_set.zName = "";
 
         orxCOMMAND_VAR_DEF ret_of_query;
         ret_of_query.eType = orxCOMMAND_VAR_TYPE_BOOL;
