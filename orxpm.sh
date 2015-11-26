@@ -1,3 +1,11 @@
+git diff-index --quiet HEAD # Check for uncommitted changes
+RC=$?
+if [[ $RC != 0 ]]; then
+    echo "You have uncommitted changes, please run orxpm.sh with a clean repo."
+    exit 1
+fi
+
+
 if [ "$#" -eq 1 ]; then
     REMOTE=$1
 elif [ -f .orxpm/remote ]; then
