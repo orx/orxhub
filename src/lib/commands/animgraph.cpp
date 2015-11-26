@@ -127,7 +127,7 @@ bool IsWhiteSpace(char c) {
 
 
 bool non_word(char c) {
-    if(c == '!' or IsWhiteSpace(c)) return true;
+    if(c == '!' || IsWhiteSpace(c)) return true;
     else return false;
 }
 
@@ -172,7 +172,7 @@ item_analysis analyzeItem(substring item) {
 }
 
 
-uint last_section_id = 0;
+orxU32 last_section_id = 0;
 void InitConfigProcessors() {
     last_section_id = 0;
 }
