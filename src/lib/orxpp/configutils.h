@@ -49,7 +49,7 @@ public:
             const char ** strings = new const char *[count];
             list.copy_to_buffer(strings, count);
             orxConfig_SetListString(section, strings, count);
-            delete strings;
+            delete[] strings;
         }
     }
 private:
